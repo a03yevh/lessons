@@ -33,7 +33,7 @@ public class Task2 {
             break;
 
             default: {
-                System.out.println("[Task 2] Ошибка: Вы ввели отрицательное число!");
+                System.out.println("[Task 2] Ошибка: Вы ввели незвестную индустрию!");
             }
         }
 

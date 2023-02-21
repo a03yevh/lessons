@@ -1,5 +1,3 @@
-//Знаю, что можно было сделать проще через if, не используя switch.
-//Но так как "просто if" был в Task1, в Task2 же решил чуть "разнообразить" switch-ом.
 public class Task2 {
     public static void main (String[] args)
     {
@@ -33,7 +31,7 @@ public class Task2 {
             break;
 
             default: {
-                System.out.println("[Task 2] Ошибка: Вы ввели незвестную индустрию!");
+                System.out.println("[Task 2] Ошибка: Вы ввели неизвестную индустрию!");
             }
         }
 

@@ -37,6 +37,6 @@ public class Task1 {
             j++;
         }
         while (j < (name.length));
-        System.out.println("=======================================");
+        System.out.println("============================================");
     }
 }

@@ -24,7 +24,8 @@ public class Task2 {
             char temp = shifr[i];
             int ascii = (int)temp+shifrNumber;
 
-            if (Character.isUpperCase(temp)) {
+            if (Character.isUpperCase(temp)) 
+            {
                 if (ascii > 'Z') {
                     ascii = ascii - 26;
                     //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться).
@@ -33,7 +34,10 @@ public class Task2 {
                     ascii = ascii + 26;
                     //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться).
                 }
-            } else {
+            } 
+            
+            else 
+            {
                 if (ascii > 'z')
                 {
                     ascii = ascii - 26;
@@ -46,8 +50,6 @@ public class Task2 {
                     //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться).
                 }
             }
-
-
             shifr[i] = (char)ascii;
         }
 
@@ -55,6 +57,5 @@ public class Task2 {
 
         String message = String.format("Исходное сообщение: %s, зашифрованное сообщение: %s, шифр: %d", word, encryptedWord, shifrNumber);
         System.out.println(message);
-
     }
 }

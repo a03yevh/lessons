@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-//realization only for a-z, A-Z.
+//realization for all.
 
-public class Task2 {
+public class Task3 {
     public static void main (String[] args) {
         int shifrNumber;
         String word = "";
@@ -16,36 +16,11 @@ public class Task2 {
 
         in.close();
 
-//        char[] shifr = new char[word.length()];
-//
-//        for (int i=0; i < word.length(); i++)  {
-//            shifr[i] = word.charAt(i);
-//        }
-
-        char[] shifr = word.toCharArray(); // заменяем лоигку 19-23 строк одной строкой.
+        char[] shifr = word.toCharArray();
 
         for (int i=0; i < shifr.length; i++) {
             char temp = shifr[i];
             int ascii = (int)temp+shifrNumber;
-
-            if (Character.isUpperCase(temp)) {
-                if (ascii > 'Z') {
-                    ascii = ascii - 26;
-                }
-                if (ascii < 'A') {
-                    ascii = ascii + 26;
-                }
-            }
-
-            else {
-                if (ascii > 'z') {
-                    ascii = ascii - 26;
-                }
-
-                if (ascii < 'a') {
-                    ascii = ascii + 26;
-                }
-            }
             shifr[i] = (char)ascii;
         }
 

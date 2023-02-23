@@ -16,11 +16,7 @@ public class Task2 {
 
         in.close();
 
-        char[] shifr = new char[word.length()];
-
-        for (int i=0; i < word.length(); i++)  {
-            shifr[i] = word.charAt(i);
-        }
+        char[] shifr = word.toCharArray();
 
         for (int i=0; i < shifr.length; i++) {
             char temp = shifr[i];

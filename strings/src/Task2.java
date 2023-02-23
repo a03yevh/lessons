@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
+//realization only for a-z, A-Z.
+
 public class Task2 {
-    public static void main (String[] args)
-    {
+    public static void main (String[] args) {
         int shifrNumber;
         String word = "";
         Scanner in = new Scanner(System.in);
@@ -17,37 +18,30 @@ public class Task2 {
 
         char[] shifr = new char[word.length()];
 
-        for (int i=0; i < word.length(); i++)  {shifr[i] = word.charAt(i);}
+        for (int i=0; i < word.length(); i++)  {
+            shifr[i] = word.charAt(i);
+        }
 
-        for (int i=0; i < shifr.length; i++)
-        {
+        for (int i=0; i < shifr.length; i++) {
             char temp = shifr[i];
             int ascii = (int)temp+shifrNumber;
 
-            if (Character.isUpperCase(temp)) 
-            {
+            if (Character.isUpperCase(temp)) {
                 if (ascii > 'Z') {
                     ascii = ascii - 26;
-                    //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться). Пришлось переставить именно в тело цикла.
                 }
                 if (ascii < 'A') {
                     ascii = ascii + 26;
-                    //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться). Пришлось переставить именно в тело цикла.
                 }
             } 
             
-            else 
-            {
-                if (ascii > 'z')
-                {
+             else {
+                if (ascii > 'z') {
                     ascii = ascii - 26;
-                    //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться). Пришлось переставить именно в тело цикла.
                 }
 
-                if (ascii < 'a')
-                {
+                if (ascii < 'a') {
                     ascii = ascii + 26;
-                    //shifr[i] = (char)ascii; -> не работает, если эту строку вставить в if ([!] разобраться). Пришлось переставить именно в тело цикла.
                 }
             }
             shifr[i] = (char)ascii;

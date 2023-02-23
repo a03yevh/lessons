@@ -16,6 +16,7 @@ public class Task2 {
 
         in.close();
 
+<<<<<<< HEAD
 //        char[] shifr = new char[word.length()];
 //
 //        for (int i=0; i < word.length(); i++)  {
@@ -24,6 +25,10 @@ public class Task2 {
 
         char[] shifr = word.toCharArray(); // заменяем лоигку 19-23 строк одной строкой.
 
+=======
+        char[] shifr = word.toCharArray();
+
+>>>>>>> 780e2a195cb9a87a95469a73aa03fd8d92d4d5e5
         for (int i=0; i < shifr.length; i++) {
             char temp = shifr[i];
             int ascii = (int)temp+shifrNumber;
@@ -35,9 +40,15 @@ public class Task2 {
                 if (ascii < 'A') {
                     ascii = ascii + 26;
                 }
+<<<<<<< HEAD
             }
 
             else {
+=======
+            } 
+            
+             else {
+>>>>>>> 780e2a195cb9a87a95469a73aa03fd8d92d4d5e5
                 if (ascii > 'z') {
                     ascii = ascii - 26;
                 }

@@ -5,14 +5,14 @@ public class Game {
     private Kitchen kitchen;
     private Bathroom bathroom;
     private Bedroom bedroom;
+    private final Room[] rooms;
 
     Game() {
         kitchen = new Kitchen("Кухня", "Большая кухня с совмещенной столовой.");
         bathroom = new Bathroom("Ванная комната", "Обычный совмещенный санузел.");
         bedroom = new Bedroom("Спальня", "Просторная спальня с двуспальной кроватью.");
+        rooms = new Room[]{kitchen, bathroom, bedroom};
     }
-
-    Room[] rooms  = {kitchen, bathroom, bedroom};
 
     public Room[] getRooms() {
         return rooms;

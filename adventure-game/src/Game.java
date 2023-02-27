@@ -19,12 +19,12 @@ public class Game {
         player.name = playerName;
         in.close();
 
-        Game game = new Game();
+        Game mygame = new Game();
 
         System.out.println("Привет, " + player.name + "!");
         System.out.println("В доме есть следующие комнаты:");
-        System.out.println(game.bathroom.name + ": " + game.bathroom.description);
-        System.out.println(game.bedroom.name + ": " + game.bedroom.description);
-        System.out.println(game.kitchen.name + ": " + game.kitchen.description);
+        System.out.println(mygame.bathroom.name + " -> " + mygame.bathroom.description);
+        System.out.println(mygame.bedroom.name + " -> " + mygame.bedroom.description);
+        System.out.println(mygame.kitchen.name + " -> " + mygame.kitchen.description);
     }
 }

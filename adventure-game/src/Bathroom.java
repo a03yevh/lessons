@@ -1,5 +1,5 @@
 public class Bathroom extends Room {
-    Item[] item;
+    public Item[] item;
 
     Bathroom(String name, String description) {
         super(name, description);
@@ -8,9 +8,15 @@ public class Bathroom extends Room {
                 new Item("Раковина", "Белая керамическая раковина")
         };
     }
-    Bathroom(String name) {
+    public Bathroom(String name) {
+
         super(name);
     }
+
+    public Bathroom(Item[] items) {
+        super(items);
+    }
+
     @Override
     public void printItems() {
       System.out.print("Предметы в комнате " + name() + ": ");

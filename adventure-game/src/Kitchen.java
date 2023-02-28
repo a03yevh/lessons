@@ -1,15 +1,20 @@
 public class Kitchen extends Room {
-    Item[] item;
+    public Item[] item;
 
-    Kitchen(String name, String description) {
+    public Kitchen(String name, String description) {
         super(name, description);
         this.item = new Item[] {
                 new Item("Выдвижной ящик", "Верхний ящик под столешницей"),
         };
     }
 
-    Kitchen(String name) {
+    public Kitchen(String name) {
+
         super(name);
+    }
+
+    public Kitchen(Item[] items) {
+        super(items);
     }
 
     @Override

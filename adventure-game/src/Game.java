@@ -46,11 +46,9 @@ public class Game {
             System.out.println((i + 1) + ". " + rooms[i].getName());
         }
 
-        // Ждем от пользователя ввода порядкового номера комнаты
         Scanner scanner = new Scanner(System.in);
         int roomNumber = scanner.nextInt();
 
-        // Возвращаем порядковый номер комнаты
         return roomNumber;
     }
     public static void main (String[] args) {

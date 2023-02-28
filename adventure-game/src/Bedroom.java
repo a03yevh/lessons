@@ -1,7 +1,7 @@
 public class Bedroom extends Room {
     Item[] item;
 
-    Bedroom(String name, String description) {
+    public Bedroom(String name, String description) {
         super(name, description);
         this.item = new Item[] {
                 new Item("Окно", "Окно с ручкой в дальней стене"),
@@ -10,8 +10,13 @@ public class Bedroom extends Room {
         };
     }
 
-    Bedroom(String name) {
+    public Bedroom(String name) {
+
         super(name);
+    }
+
+    public Bedroom(Item[] items) {
+        super(items);
     }
 
     @Override

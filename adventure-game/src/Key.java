@@ -12,7 +12,7 @@ public class Key extends Item implements Useful {
             System.out.println("Ничего не произошло.");
         }
     }
-}
+
 
     @Override
     public void use() {

@@ -1,7 +1,7 @@
 public class Player {
-    public String name;
-    public Item[] item = new Item[10];
-    public Room currentRoom;
+    String name;
+    Item[] item = new Item[10];
+    Room currentRoom;
 
     public Player() {
         this.currentRoom = null;

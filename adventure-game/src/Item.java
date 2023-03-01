@@ -1,6 +1,6 @@
 public class Item {
-    public String name;
-    public String description;
+    String name;
+    String description;
 
     public Item(String name, String description) {
         this.name = name;
@@ -10,9 +10,4 @@ public class Item {
     public String getName() {
         return name;
     }
-    public String getDescription() {
-        return description;
-    }
-
-    public void use();
 }

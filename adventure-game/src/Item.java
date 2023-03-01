@@ -1,4 +1,4 @@
-public abstract class Item {
+public class Item {
     public String name;
     public String description;
 
@@ -14,5 +14,5 @@ public abstract class Item {
         return description;
     }
 
-    public abstract void use();
+    public void use();
 }

@@ -18,8 +18,14 @@ public class Player {
 
     public void showItems() {
         System.out.println("Предметы в инвентаре:");
-        for (Item item : item) {
-            System.out.println("- " + item.getName());
+        if (item != null) {
+            for (Item item : item) {
+                if (item != null) {
+                    System.out.println("- " + item.getName());
+                }
+            }
+        } else {
+            System.out.println("Инвентарь пуст.");
         }
     }
 }

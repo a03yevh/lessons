@@ -1,7 +1,11 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public abstract class Room {
     public String name;
     public String description;
-    public Item[] item;
+    public List<Item> items;
+
     public String name() {
 
         return name;
@@ -17,11 +21,12 @@ public abstract class Room {
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
+        this.items = new ArrayList<>();
     }
-    public Room(String name, String description, Item[] item) {
+    public Room(String name, String description, List<Item> items) {
         this.name = name;
         this.description = description;
-        this.item = item;
+        this.items = items;
     }
 
     public Room(String name) {
@@ -29,7 +34,11 @@ public abstract class Room {
         this.name = name;
     }
 
-    public Room(Item[] items) {
-        this.item = items;
+    public Room(List<Item> items) {
+        this.items = items;
+    }
+
+    public List<Item> getItems() {
+        return items;
     }
 }

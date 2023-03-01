@@ -1,5 +1,4 @@
 public class Bedroom extends Room {
-    Item[] item;
 
     public Bedroom(String name, String description) {
         super(name, description);

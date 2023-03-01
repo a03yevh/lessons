@@ -1,31 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bathroom extends Room {
-    public Item[] item;
-
-    Bathroom(String name, String description) {
+    public Bathroom(String name, String description) {
         super(name, description);
-        this.item = new Item[] {
-                new Item("Зеркало", "Круглое зеркало над раковиной"),
-                new Item("Раковина", "Белая керамическая раковина")
-        };
+        this.items = new ArrayList<>();
+        this.items.add(new Item("Зеркало", "Круглое зеркало над раковиной"));
+        this.items.add(new Item("Раковина", "Белая керамическая раковина"));
     }
-    public Bathroom(String name) {
 
+    public Bathroom(String name) {
         super(name);
     }
 
-    public Bathroom(Item[] items) {
+    public Bathroom(List<Item> items) {
+
         super(items);
     }
 
     @Override
     public void printItems() {
-      System.out.print("Предметы в комнате " + name() + ": ");
-            for (int i = 0; i < item.length; i++) {
-                System.out.print(item[i].getName());
-                if (i < item.length - 1) {
-                    System.out.print(", ");
-                }
+        System.out.print("Предметы в комнате " + name() + ": ");
+        for (int i = 0; i < this.items.size(); i++) {
+            System.out.print(items[i].getName());
+            for (Item item : this.items) {
+                System.out.println("- " + item.getName() + " (" + item.getDescription() + ")");
             }
-            System.out.println();
         }
+        System.out.println();
+    }
 }

@@ -10,4 +10,9 @@ public abstract class Item {
     public String getName() {
         return name;
     }
+    public String getDescription() {
+        return description;
+    }
+
+    public abstract void use();
 }

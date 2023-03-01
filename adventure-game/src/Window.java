@@ -1,13 +1,18 @@
-public class Window extends Item {
+public class Window extends Item implements Useful {
+
+    private String text;
+
+    public Window(String name, String description, String text) {
+        super(name, description);
+        this.text = text;
+    }
+
     public Window(String name, String description) {
         super(name, description);
     }
 
-    public void open() {
-        System.out.println("The window is now open.");
-    }
-
-    public void close() {
-        System.out.println("The window is now closed.");
+    @Override
+    public void use() {
+        System.out.println(text);
     }
 }

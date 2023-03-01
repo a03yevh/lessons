@@ -14,4 +14,8 @@ public abstract class Item {
     public String getDescription() {
         return description;
     }
+
+    public void use() {
+        System.out.println("Этот предмет не может быть использован.");
+    }
 }

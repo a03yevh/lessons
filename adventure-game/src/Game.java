@@ -7,17 +7,26 @@ public class Game {
     private Bedroom bedroom;
     Room[] rooms;
 
+    public static void setGameFinished(boolean value) {
+        isGameFinished = value;
+    }
     Game() {
         kitchen = new Kitchen("Кухня", "Большая кухня с совмещенной столовой.");
         bathroom = new Bathroom("Ванная комната", "Обычный совмещенный санузел.");
         bedroom = new Bedroom("Спальня", "Просторная спальня с двуспальной кроватью.");
         rooms = new Room[]{kitchen, bathroom, bedroom};
+        kitchen.addItem(key2);
+        bathroom.addItem(key3);
+        bedroom.addItem(key1);
     }
+    Item key1 = new Key("Старинный ключ", "Ключ окончания игры");
+    Item key2 = new Key("Золотой ключ", "Ключ 2");
+    Item key3 = new Key("Серебрянный ключ", "Ключ 1");
 
-
-    public Room[] getRooms() {
+   public Room[] getRooms() {
         return rooms;
     }
+
     public int showMenu() {
         Scanner scanner = new Scanner(System.in);
         int choice;

@@ -10,7 +10,6 @@ public class Player {
     public void setCurrentRoom(Room room) {
         if (room != null) {
             currentRoom = room;
-            System.out.println("Вы перешли в комнату " + room.getName() + ".");
         } else {
             System.out.println("Ошибка: комната не найдена.");
         }

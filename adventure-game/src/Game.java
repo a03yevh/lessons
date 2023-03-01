@@ -5,14 +5,15 @@ public class Game {
     private Kitchen kitchen;
     private Bathroom bathroom;
     private Bedroom bedroom;
+    Room[] rooms;
 
     Game() {
         kitchen = new Kitchen("Кухня", "Большая кухня с совмещенной столовой.");
         bathroom = new Bathroom("Ванная комната", "Обычный совмещенный санузел.");
         bedroom = new Bedroom("Спальня", "Просторная спальня с двуспальной кроватью.");
+        rooms = new Room[]{kitchen, bathroom, bedroom};
     }
 
-    Room[] rooms  = {kitchen, bathroom, bedroom};
 
     public Room[] getRooms() {
         return rooms;
@@ -43,7 +44,9 @@ public class Game {
         System.out.println("Выберите комнату:");
 
         for (int i = 0; i < rooms.length; i++) {
-            System.out.println((i + 1) + ". " + rooms[i].getName());
+            if (rooms[i] != null) {
+                System.out.println((i + 1) + ". " + rooms[i].getName());
+            }
         }
 
         // Ждем от пользователя ввода порядкового номера комнаты
@@ -77,8 +80,12 @@ public class Game {
                 int roomNumber = game.showRooms();
                 if (roomNumber > 0 && roomNumber <= game.getRooms().length) {
                     Room selectedRoom = game.getRooms()[roomNumber - 1];
-                    player.setCurrentRoom(selectedRoom);
-                    System.out.println("Вы перешли в комнату " + selectedRoom.getName());
+                    if (selectedRoom != null) {
+                        player.setCurrentRoom(selectedRoom);
+                        System.out.println("Вы перешли в комнату " + selectedRoom.getName());
+                    } else {
+                        System.out.println("Ошибка: выбранная комната не существует.");
+                    }
                 }
             } else if (choice == 2) {
                 player.showItems();

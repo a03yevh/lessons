@@ -1,4 +1,4 @@
-public class Room {
+public abstract class Room {
     String name;
     String description;
     Item[] item;
@@ -11,9 +11,7 @@ public class Room {
     public String getName() {
         return name;
     }
-    public void printItems() {
-        System.out.println("В этой комнате нет доступных предметов");
-    }
+    public abstract void printItems();
     Room(String name, String description) {
         this.name = name;
         this.description = description;

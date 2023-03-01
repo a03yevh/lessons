@@ -1,4 +1,4 @@
-public class Item {
+public abstract class Item {
     String name;
     String description;
 
@@ -9,5 +9,9 @@ public class Item {
 
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

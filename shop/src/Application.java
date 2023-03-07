@@ -6,6 +6,7 @@ public class Application {
     };
 
     public static void main(String[] args) {
+        Product[] products = FileUtil.readProducts();
         Menu menu = new Menu();
         while (true) {
             menu.printMainMenu();
@@ -17,6 +18,7 @@ public class Application {
                 case 2:
                     Product newProduct = menu.createProduct();
                     products = addProduct(products, newProduct);
+                    FileUtil.saveProducts(products);
                     break;
                 case 3:
                     System.exit(0);
@@ -26,6 +28,7 @@ public class Application {
             }
         }
     }
+
 
     private static Product[] addProduct(Product[] products, Product newProduct) {
         Product[] newProducts = new Product[products.length + 1];

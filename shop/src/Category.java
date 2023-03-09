@@ -1,3 +1,0 @@
-enum Category {
-    ELECTRONICS, FURNITURE, ACCESSORIES
-}
